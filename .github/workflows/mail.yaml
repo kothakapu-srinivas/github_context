@@ -8,5 +8,5 @@ jobs:
         env:
           RUNNER_CONTEXT: ${{ toJson(runner) }}
         run: |
-           echo "${{ RUNNER_CONTEXT }}"
+           echo "$RUNNER_CONTEXT"
           
