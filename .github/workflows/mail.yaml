@@ -11,39 +11,14 @@ jobs:
         run: echo "$GITHUB_CONTEXT"
   env:
     runs-on: ubuntu-latest
+    if: event == pull_request
     steps:
       - name: env_context_properties
         env:
           ENV_CONTEXT: ${{ toJson(env) }}
         run: echo "$ENV_CONTEXT"  
         
-  vars:
-    runs-on: ubuntu-latest
-    steps:
-      - name: var_context_properties
-        env:
-          VAR_CONTEXT: ${{ toJson(vars) }}
-        run: echo "$VAR_CONTEXT"    
-        
-  job:
-    runs-on: ubuntu-latest
-    steps:
-      - name: job_context_properties
-        env:
-          JOB_CONTEXT: ${{ toJson(job) }} 
-        run: echo $JOB_CONTEXT     
-
-  jobs:
-     runs-on: ubuntu-latest
-     steps:
-     - name: events_context_properties
-       env:
-         EVENT_CONTEXT: ${{ toJson(events) }}
-       run: echo $EVENT_CONTEXT  
-
-
-
-      
+ 
 
            
           
