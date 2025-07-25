@@ -11,7 +11,7 @@ jobs:
         run: echo "$GITHUB_CONTEXT"
   env:
     runs-on: ubuntu-latest
-    if: event == pull_request
+    if: github.event_name == pull_request
     steps:
       - name: env_context_properties
         env:
