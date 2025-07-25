@@ -13,5 +13,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Runner details
-      run: echo '{{ toJso(runner) }}'
+      run: echo '{{ toJson(runner) }}'
   
