@@ -7,4 +7,4 @@ jobs:
       - name: GitHub Context
         env:
             GITHUB_CONTEXT: ${{ toJson(github) }}
-        run: ${{ GITHUB_CONTEXT }}    
+        run: echo '${{ GITHUB_CONTEXT }}"    
