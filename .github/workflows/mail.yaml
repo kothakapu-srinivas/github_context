@@ -5,10 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print event type
+        env:
+          RUNNER_CONTEXT: ${{ toJson(runner) }}
         run: |
-           echo "Job Container: ${{ job.container }}"
-           echo "Job Container ID: ${{ job.container.id }}"
-           echo "Job Container Network: ${{ job.container.network }}"
-           echo "Job Services: ${{ job.services }}"
-           echo "Job Status: ${{ job.status }}"
+           echo "${{ RUNNER_CONTEXT }}"
           
