@@ -1,10 +1,9 @@
 name: Context Workflow
 on: push
+
 jobs:
   github_context:
     runs-on: ubuntu-latest
     steps:
-      - name: GitHub Context
-        env:
-            GITHUB_CONTEXT: ${{ toJson(github) }}
-        run: echo '${{ GITHUB_CONTEXT }}"    
+      - name: Print GitHub Context
+        run: echo '${{ toJson(github) }}'
