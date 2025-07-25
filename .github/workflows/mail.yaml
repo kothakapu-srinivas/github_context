@@ -1,0 +1,10 @@
+name: Context Workflow
+on: push
+jobs:
+  github_context:
+    runs-on: ubuntu-latest
+    steps:
+      - name: GitHub Context
+        env:
+            GITHUB_CONTEXT: ${{ toJson(github)}}
+        run: $GITHUB_CONTEXT    
