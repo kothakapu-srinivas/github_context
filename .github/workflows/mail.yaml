@@ -6,10 +6,9 @@ jobs:
     steps:
       - name: Print event type
         run: |
-          echo "Event type: ${{ github.event_name }}"
-          echo "Repository: ${{ github.repository }}"
-          echo "Runner: ${{ runner.name }}"
-          echo "Runner OS: ${{ runner.os }}"
-          echo "Runner Arch: ${{ runner.arch }}"
-          echo "Runner Temp Directory: ${{ runner.temp }}"
-          echo "Runner Environment: ${{ runner.environment }}"
+           echo "Job Container: ${{ job.container }}"
+           echo "Job Container ID: ${{ job.container.id }}"
+           echo "Job Container Network: ${{ job.container.network }}"
+           echo "Job Services: ${{ job.services }}"
+           echo "Job Status: ${{ job.status }}"
+          
