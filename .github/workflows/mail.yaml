@@ -2,6 +2,7 @@ name: github_context_properties
 on: push
 jobs:
   github:
+    if: github.ref == '/refs/head/main'
     runs-on: ubuntu-latest
     steps:
       - name: github_context_properties
