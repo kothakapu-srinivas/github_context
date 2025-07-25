@@ -35,10 +35,10 @@ jobs:
   jobs:
      runs-on: ubuntu-latest
      steps:
-     - name: jobs_context_properties
+     - name: runner_context_properties
        env:
-         JOBS_CONTEXT: ${{ toJson(jobs) }}
-       run: echo $JOBS_CONTEXT  
+         RUNNER_CONTEXT: ${{ toJson(runner) }}
+       run: echo $RUNNER_CONTEXT  
 
 
 
