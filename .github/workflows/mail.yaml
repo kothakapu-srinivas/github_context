@@ -8,3 +8,8 @@ jobs:
         run: |
           echo "Event type: ${{ github.event_name }}"
           echo "Repository: ${{ github.repository }}"
+          echo "Runner: ${{ runner.name }}"
+          echo "Runner OS: ${{ runner.os }}"
+          echo "Runner Arch: ${{ runner.arch }}"
+          echo "Runner Temp Directory: ${{ runner.temp }}"
+          echo "Runner Environment: ${{ runner.environment }}"
