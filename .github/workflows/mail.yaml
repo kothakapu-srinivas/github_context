@@ -9,3 +9,9 @@ jobs:
         run: echo '${{ toJson(github) }}'
       - name: Print ENV variables
         run: echo '${{ toJson(env) }}'
+  runner:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Runner details
+      run: echo '{{ toJso(runner) }}'
+  
