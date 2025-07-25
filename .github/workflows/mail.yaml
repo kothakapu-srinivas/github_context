@@ -1,17 +1,8 @@
-name: Context Workflow
+name: github_context_properties
 on: push
-
 jobs:
-  github_context:
+  github_context_properties:
     runs-on: ubuntu-latest
     steps:
-      - name: Print GitHub Context
-        run: echo '${{ toJson(github) }}'
-      - name: Print ENV variables
-        run: echo '${{ toJson(env) }}'
-  runner:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Runner details
-      run: echo '{{ toJson(runner) }}'
-  
+      - name: Print event type
+        run: echo "${{ github.event_name }}"
