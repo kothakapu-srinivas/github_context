@@ -5,4 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print event type
-        run: echo "Event type: ${{ github.event_name }}"
+        run: |
+          echo "Event type: ${{ github.event_name }}"
