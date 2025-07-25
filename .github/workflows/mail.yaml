@@ -36,10 +36,10 @@ jobs:
   jobs:
      runs-on: ubuntu-latest
      steps:
-     - name: runner_context_properties
+     - name: events_context_properties
        env:
-         RUNNER_CONTEXT: ${{ toJson(runner) }}
-       run: echo $RUNNER_CONTEXT  
+         EVENT_CONTEXT: ${{ toJson(events) }}
+       run: echo $EVENT_CONTEXT  
 
 
 
