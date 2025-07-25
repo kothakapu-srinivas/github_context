@@ -1,12 +1,41 @@
 name: github_context_properties
 on: push
 jobs:
-  github_context_properties:
+  github:
     runs-on: ubuntu-latest
     steps:
-      - name: Print event type
+      - name: github_context_properties
         env:
-          RUNNER_CONTEXT: ${{ toJson(runner) }}
-        run: |
-           echo "$RUNNER_CONTEXT"
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
+  env:
+    runs-on: ubuntu-latest
+    steps:
+      - name: env_context_properties
+        env:
+          ENV_CONTEXT: ${{ toJson(env) }}
+        run: echo "$ENV_CONTEXT"  
+        
+  vars:
+    runs-on: ubuntu-latest
+    steps:
+      - name: var_context_properties
+        env:
+          VAR_CONTEXT: ${{ toJson(vars) }}
+        run: echo "$VAR_CONTEXT"    
+        
+  job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: job_context_properties
+        env:
+          JOB_CONTEXT: ${{ toJson(job) }} 
+        run: echo $JOB_CONTEXT     
+
+
+
+
+      
+
+           
           
