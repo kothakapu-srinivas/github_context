@@ -32,6 +32,13 @@ jobs:
           JOB_CONTEXT: ${{ toJson(job) }} 
         run: echo $JOB_CONTEXT     
 
+  jobs:
+     runs-on: ubuntu-latest
+     steps:
+     - name: jobs_context_properties
+       env:
+         JOBS_CONTEXT: ${{ toJson(jobs) }}
+       run: echo $JOBS_CONTEXT  
 
 
 
